@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.container-nav {
+    background-color: #d9d9d9;
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo, .nav-btn {
+    background-color: #222;
+    padding: 20px
+}
+
+.grid-container {
+    display: grid;
+    background-color: #d9d9d9;
+    margin: 15px;
+    padding: 15px;
+    gap: 15px;
+    grid-template-areas: 
+    "image image image image"
+    "box-1 box-1 box-2 box-2"
+    "box-3 box-3 box-4 box-4"
+    "box-5 box-5 box-6 box-6"
+    "footer footer footer footer";
+}
+
+.grid {
+    background-color: #222;
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+.one {
+    grid-area: image;
+    height: 30vh;
+}
+
+.two {
+    grid-area: box-1;
+    height: 30vh;
+}
+
+.three {
+    grid-area: box-2;
+}
+
+.four {
+    grid-area: box-3;
+    height: 30vh;
+}
+
+.five {
+    grid-area: box-4;
+}
+
+.six {
+    grid-area: box-5;
+    height: 30vh;
+}
+
+.seven {
+    grid-area: box-6;
+}
+
+.eight {
+    grid-area: footer;
+    text-align: center;
+}
+
+@media(min-width: 801px) {
+    .grid-container {
+        grid-template-areas: 
+    "image image image"
+    "box-1 box-2 box-3"
+    "box-4 box-5 box-6"
+    "footer footer footer";
+    }
+
+    .one {
+        height: 50vh;
+    }
+}
+
+@media(min-width: 1100px) {
+    .grid-container {
+        grid-template-areas: 
+    "image image box-1"
+    "box-2 box-3 box-3"
+    "box-4 box-5 box-6"
+    "footer footer footer";
+    row-gap: 50px;
+    padding-top: 50px;
+    }
+
+    .nav-btn {
+        flex: 0.5;
+        text-align: center;
+    }
+
+    .four {
+        height: 50vh;
+    }
+
+    .three, .two, .five, .six, .seven {
+        height: 30vh;
+    }
+
+    .two {
+        align-self: end;
+    }
+}
